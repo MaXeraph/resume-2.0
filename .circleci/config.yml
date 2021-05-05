@@ -18,15 +18,19 @@ jobs:
       - add_ssh_keys
       - checkout
       - run:
-          name: Build th PDF
+          name: Build the PDF
           command: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
       - store_artifacts:
           path: ~/project/example/cv.pdf
-          
       - run:
-          name: list files
+          name: Move file
           command: |
             mv ~/project/example/cv.pdf ./resume.pdf
-            git add -f ./resume.pdf
-            git commit -m "Updated new resume pdf"
-            git push
+      - run:
+          name: Commit to GitHub
+          command: |
+            git config user.email "maxpham99@gmail.com"
+            git config user.name "CircleCI Job"
+            git checkout master
+            git commit --allow-empty -am "Updated new resume from CircleCI [skip ci]"
+            git push origin master
