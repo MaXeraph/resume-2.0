@@ -4,21 +4,25 @@ jobs:
     docker:
       - image: ubuntu:latest
     steps:
-      - run:
-          name: Git installation
-          command: apt-get -qq update; apt-get -y install git
-      - run: 
-          name: install tzdata
-          command: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
-      - run:
-          name: Latex installation
-          command: apt-get -qq update && apt-get install -y --no-install-recommends latexmk texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-xetex texlive-pictures texlive-lang-french lmodern fonts-font-awesome
-          environment: 
-            TZ: America/Toronto
+#       - run:
+#           name: Git installation
+#           command: apt-get -qq update; apt-get -y install git
+#       - run: 
+#           name: install tzdata
+#           command: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+#       - run:
+#           name: Latex installation
+#           command: apt-get -qq update && apt-get install -y --no-install-recommends latexmk texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-luatex texlive-xetex texlive-pictures texlive-lang-french lmodern fonts-font-awesome
+#           environment: 
+#             TZ: America/Toronto
       - add_ssh_keys
       - checkout
+#       - run:
+#           name: Build th PDF
+#           command: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
+#       - store_artifacts:
+#           path: ~/project/example/cv.pdf
+          
       - run:
-          name: Build th PDF
-          command: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
-      - store_artifacts:
-          path: ~/project/example/cv.pdf
+          name: list files
+          command: ls
