@@ -27,6 +27,6 @@ jobs:
           name: list files
           command: |
             mv ~/project/example/cv.pdf ./resume.pdf
-            git add resume.pdf
+            git add -f ./resume.pdf
             git commit -m "Updated new resume pdf"
             git push
