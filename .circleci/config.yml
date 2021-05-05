@@ -32,5 +32,6 @@ jobs:
             git config user.email "maxpham99@gmail.com"
             git config user.name "CircleCI Job"
             git checkout master
+            git add -f ./resume.pdf
             git commit --allow-empty -am "Updated new resume from CircleCI [skip ci]"
             git push origin master
