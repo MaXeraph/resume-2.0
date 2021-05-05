@@ -368,11 +368,9 @@
 
 % Define a footer for CV
 % Usage: \makecvfooter{<left>}{<center>}{<right>}
-\newcommand*{\makecvfooter}[3]{%
+\newcommand*{\makecvfooter}[1]{%
   \fancyfoot{}
-  \fancyfoot[L]{#1}
-  \fancyfoot[C]{#2}
-  \fancyfoot[R]{#3}
+  \fancyfoot[C]{#1}
 }
 
 % Resume part title definition
@@ -430,6 +428,13 @@
 }{%
   \end{longtable}
 }
+
+\newcommand\university[5]{
+  \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
+  \textbf{#4}    & \begin{minipage}[t]{\rightcolumnlength}
+  					         #5
+                   \end{minipage}										\\*
+  }
 
 % Render an experience in the experiences environment
 % Usage:
@@ -538,4 +543,3 @@
     \end{tabular}
   \end{minipage}%
 }
-
