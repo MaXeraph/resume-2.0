@@ -4,9 +4,9 @@ jobs:
     docker:
       - image: ubuntu:latest
     steps:
-#       - run:
-#           name: Git installation
-#           command: apt-get -qq update; apt-get -y install git
+      - run:
+          name: Git installation
+          command: apt-get -qq update; apt-get -y install git
 #       - run: 
 #           name: install tzdata
 #           command: DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
@@ -21,8 +21,8 @@ jobs:
 #           name: Build th PDF
 #           command: cd example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex
 #       - store_artifacts:
-#           path: ~/project/example/cv.pdf
+#           path: ./project/example/cv.pdf
           
       - run:
           name: list files
-          command: ls
+          command: git status
