@@ -1,7 +1,7 @@
 YAAC: Another Awesome CV [![CircleCI](https://circleci.com/gh/MaXeraph/resume-2.0.svg?style=svg)](https://circleci.com/gh/MaXeraph/resume-2.0) [![Example](https://img.shields.io/badge/Exemple-pdf-blue.svg)](https://github.com/darwiin/yaac-another-awesome-cv/releases/download/v1.8.0/cv.pdf)
 =================
 
-## Quick start
+## Quick start 
 
 You can edit online **YAAC: Another Awesome CV** template on [Overleaf](https://www.overleaf.com/latex/templates/awesome-source-cv/wrdjtkkytqcw). Feel free to use my [referal link](https://www.overleaf.com/signup?ref=54c221604cd6) if you want to create your account.
 
