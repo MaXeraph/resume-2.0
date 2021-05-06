@@ -66,7 +66,7 @@
 
 % Dependences
 %A Few Useful Packages
-\RequirePackage[english,french]{babel}
+\RequirePackage[english]{babel}
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec} 					                 % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
@@ -388,7 +388,7 @@
 % Render a scholarshipentry in the scolarship environment
 % Usage: \scholarshipentry{<date>}{<description>}
 \newcommand\keywordsentry[2]{
-  \textbf{#1} &   #2\\
+  \textbf{#1}    & #2\\
 }
 
 % Define a new column type for the scholarship environment
@@ -429,11 +429,13 @@
   \end{longtable}
 }
 
-\newcommand\university[5]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
-  \textbf{#4}    & \begin{minipage}[t]{\rightcolumnlength}
+\newcommand\university[6]{
+   to \textbf{#1}   & \textbf{#2, \textsc{#3}}   								\\*
+   from \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #5
-                   \end{minipage}										\\*
+                   \end{minipage} \\* 
+                   \vspace{0.5mm}
+  & \footnotesize{{\cvtag{#6}}} \\
   }
 
 % Render an experience in the experiences environment
@@ -445,11 +447,11 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
-  \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
+  to \textbf{#1}   & \textbf{#2, \textsc{#3}, #4}   								\\*
+  from \textbf{#5} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #6
-                   \end{minipage}										\\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+                   \end{minipage} \\*
+                   & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
@@ -496,7 +498,7 @@
 \newcommand\project[5]{
   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
     \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\\
+    #3\vspace{0.85mm}\\
     #4\smallskip\\
     \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
   \end{minipage}
