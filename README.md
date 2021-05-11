@@ -13,7 +13,7 @@ You can edit online **YAAC: Another Awesome CV** template on [Overleaf](https://
 
 Unlike _Alessandro Plasmati_ CV template, all layout stuff in **YAAC: Another Awesome CV** has moved in the Latex class file _yaac-another-awesome-cv.cls_ to improve source code readability and style reusability.
 
-More informations about the original Alessandro Plasmati template can be found here :
+More informations about the original Alessandro Plasmati template can be found here:
 
    -  [ Scribd ](http://fr.scribd.com/doc/16335667/Writing-your-Professional-CV-with-LaTeX)
    -  [ LaTeX Templates ](http://www.latextemplates.com/template/plasmati-graduate-cv)
