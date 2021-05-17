@@ -111,17 +111,22 @@
 \colorlet{accentcolor}{linkcolor!90}
 \colorlet{symbolcolor}{linkcolor!85}
 
+
 % Setup hyperref package, and colours for links
 %\definecolor{linkcolour}{rgb}{0,0.2,0.6}
 
 \if@showLinks
   \hypersetup{%
-    breaklinks
+    breaklinks,
+    pdftitle={Resume},
+    pdfauthor={Max Pham}
   }%
 \else
   \hypersetup{%
     pdfborder = {0 0 0},
-    breaklinks
+    breaklinks,
+    pdftitle={Resume},
+    pdfauthor={Max Pham}
   }%
 \fi
 
@@ -235,10 +240,6 @@
 \newcommand*{\familyname}[1]{\def\@lastname{#1}}
 \def\@familyname{\@lastname}
 
-% Define author's tagline
-% Usage: \tagline{<tag line>}
-\newcommand*{\tagline}[1]{\def\@tagline{#1}}
-
 % Define author's photo
 % Usage: \photo[<shape: circular, square, roundedsquare, squircle>]{<diameter>}{<photo>}
 % The shape of the author's photo is circular by default.
@@ -292,18 +293,6 @@
 % Usage: \smartphone{<mobile phone number>}
 \newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
 
-% Render author's tagline
-\newcommand\resumetitle[1]{
-  \ifundef{\@alternative}{
-	 \par{
-	 	 \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
-	 }
-	 \bigskip
-  }{
-    \color{accentcolor}\textbf{\large{#1}}\color{black}
-  }
-}
-
 \newcommand\idphoto{
 	\ifthenelse{\equal{\@photoshape}{square}}{
 		% Draw square photo
@@ -329,7 +318,7 @@
 \newcommand{\socialinfo}[1]{\def\@socialinfo{#1}}
 
 % Render CV header
-% Needs \@firstname, \@lastname and \@tagline to be defined
+% Needs \@firstname, \@lastname and  to be defined
 \newcommand*{\makecvheader}{
   \ifundef{\@alternative}{
     \ifundef{\@photodiameter}{
@@ -345,7 +334,6 @@
         \idphoto
       \end{minipage}
     }{}
-    \resumetitle{\@tagline}
   }{
     \ifundef{\@photodiameter}{
       \begin{minipage}{\linewidth}
@@ -353,8 +341,6 @@
       \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}
     }
     \user{\@firstname}{\@lastname}\\
-    \resumetitle{\@tagline}
-    \smallskip\\
     \small{\@socialinfo}
     \end{minipage}
     \ifdef{\@photodiameter}{
@@ -430,8 +416,8 @@
 }
 
 \newcommand\university[6]{
-   to \textbf{#1}   & \textbf{#2, \textsc{#3}}   								\\*
-   from \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+   from \textbf{#1}   & \textbf{#2, \textsc{#3}}   								\\*
+   to \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #5
                    \end{minipage} \\* 
                    \vspace{0.5mm}
@@ -447,8 +433,8 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  to \textbf{#1}   & \textbf{#2, \textsc{#3}, #4}   								\\*
-  from \textbf{#5} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+  from \textbf{#1}   & \textbf{#2, \textsc{#3}, #4}   								\\*
+  to \textbf{#5} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #6
                    \end{minipage} \\*
                    & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
