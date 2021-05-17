@@ -1,4 +1,4 @@
-YAAC: Another Awesome CV [![CircleCI](https://circleci.com/gh/MaXeraph/resume-2.0.svg?style=svg)](https://circleci.com/gh/MaXeraph/resume-2.0) [![Example](https://img.shields.io/badge/Exemple-pdf-blue.svg)](https://github.com/MaXeraph/resume-2.0/raw/master/resume.pdf)
+YAAC: Another Awesome CV [![CircleCI](https://circleci.com/gh/MaXeraph/resume-2.0.svg?style=svg)](https://circleci.com/gh/MaXeraph/resume-2.0) [![Example](https://img.shields.io/badge/Example-pdf-blue.svg)](https://github.com/MaXeraph/resume-2.0/raw/master/resume.pdf)
 =================
 
 ## Quick start 
