@@ -255,7 +255,7 @@
 
 % Render author's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/}{linkedin.com/in/#1}}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/}{ linkedin.com/in/#1}}
 
 % Render author's viadeo(optional)
 % Usage: \viadeo{<viadeo-nick>}
@@ -263,7 +263,7 @@
 
 % Render author's github (optional)
 % Usage: \github{<github-nick>}
-\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{ github.com/#1}}           % Github icon + URL
 
 % Render author's stackoverflow profile (optional)
 % Usage: \stackoverflow{<stackoverflow-user-id>}
@@ -283,15 +283,15 @@
 
 % Render author's email (optional)
 % Usage: \email{<email adress>}
-\newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
+\newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{ #1}}
 
 % Render a website link (optional)
 % Usage: \website{<website name>}{<website adress>}
-\newcommand*{\website}[2]{\sociallink{\websiteSymbol}{#1}{#2}}
+\newcommand*{\website}[2]{\sociallink{\websiteSymbol}{#1}{ #2}}
 
 % Render author's mobile phone (optional)
 % Usage: \smartphone{<mobile phone number>}
-\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
+\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{ #1}}
 
 \newcommand\idphoto{
 	\ifthenelse{\equal{\@photoshape}{square}}{
@@ -501,6 +501,12 @@
     #2
   \end{minipage}
   }
+
+\newcommand*\onecolumnsection[1]{
+    \begin{minipage}[t]{\dimexpr(\linewidth) - 3em}
+        #1
+    \end{minipage}
+    }
 
 % Define the 'referencees' environment
 \newenvironment{referees}{%
