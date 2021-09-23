@@ -415,13 +415,11 @@
   \end{longtable}
 }
 
-\newcommand\university[6]{
+\newcommand\university[5]{
    from \textbf{#1}   & \textbf{#2, \textsc{#3}}   								\\*
    to \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #5
                    \end{minipage} \\* 
-                   \vspace{0.5mm}
-  & \footnotesize{{\cvtag{#6}}} \\
   }
 
 % Render an experience in the experiences environment
@@ -484,8 +482,10 @@
 \newcommand\project[5]{
   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
     \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\vspace{0.85mm}\\
-    #4\smallskip\\
+    #3\smallskip\\
+    \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+        #4
+    \end{minipage} \\*
     \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
   \end{minipage}
   \\*
