@@ -88,7 +88,8 @@
 
 \DeclareUnicodeCharacter{00E9}{\'{e}}
 % Define default accent colors
-\definecolor{basecolor}{HTML}{000066}       %BLUE
+% \definecolor{basecolor}{HTML}{000066}       %BLUE
+\definecolor{basecolor}{HTML}{000000}       %BLACK
 
 \ifundef{\@green} {
   \ifundef{\@red} {
@@ -486,7 +487,7 @@
     \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
         #4
     \end{minipage} \\*
-    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
+    \smallskip\footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
   \end{minipage}
   \\*
 }
