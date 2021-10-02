@@ -487,7 +487,7 @@
     \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
         #4
     \end{minipage} \\*
-    \smallskip\footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
+    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
   \end{minipage}
   \\*
 }
