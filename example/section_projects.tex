@@ -14,22 +14,26 @@
 
 \begin{projects}
 	\project
-	{SDC Tools}{ }
-	{\github{MaXeraph/proj-FakeBirds}}
+	{Mango App}{ }
+	{\website{https://mango-app-staging.herokuapp.com/}{Application}}
 	{\begin{itemize}
-        \item{Webapp for filling out medical SDC forms (XML) and converting them to PDF}
+        \setlength\itemsep{0.2em}
+        \item{Webapp for generating adaptive banking offers using ML and Statistical Analysis}
         \begin{itemize}
-            \item{Developed the mapping between custom XML to JSON syntax and created the parser through pair programming}
-            \item{Lead designer of API endpoints and Electron-app packaging pipeline}
+            \setlength\itemsep{0.2em}
+            \item{Scaffolded and deployed the React frontend with Python Flask backend as well as PyTorch modeling service}
+            \item{Designed and Implemented frontend with \link{https://chakra-ui.com/}{\underline{ChakraUI} } along with custom authentication through \link{https://auth0.com/}{\underline{Auth0}}}
+            \item{Setup and wrote tests for using TestingLibrary and Jest with acceptable coverage of 75\%}
         \end{itemize}   
       \end{itemize}
     }
-	{Python,Flask,React,Javascript,Electron}
+	{React,Auth0,Python,Jest,ChakraUI,JWT}
 
 	\project
 	{Portal}{ }
 	{\github{MaXeraph/Portal} \website{https://portal-course.herokuapp.com/}{Application}}
 	{\begin{itemize}
+        \setlength\itemsep{0.2em}
         \item{Webapp for compiles every piece of information about a course and its related Reddit posts}
         \begin{itemize}
             \item{Implemented backend to populate DB with Course Data from UofT's Calendar and Reddit's related posts}
@@ -42,7 +46,7 @@
 	{ext4 Clone}{ }
 	{\website{https://artsci.calendar.utoronto.ca/course/csc369h1}{Course Assignment}}
 	{\begin{itemize}
-        \item{ext4-inspired file system with $ls,cd,mkdir,mv,rm$ fully implemented using C on top of \link{https://github.com/libfuse/libfuse}{FUSE}}
+        \item{ext4-inspired file system with $ls,cd,mkdir,mv,rm$ fully implemented using C on top of \link{https://github.com/libfuse/libfuse}{\underline{FUSE}}}
       \end{itemize}   
     }
 	{C,libFUSE,Linux}
