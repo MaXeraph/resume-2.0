@@ -432,11 +432,19 @@
 %                    }
 %                    {<Technology list>}
 \newcommand\experience[7]{
-  from \textbf{#1}   & \textbf{#2, \textsc{#3}, #4}   								\\*
-  to \textbf{#5} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+  to \textbf{#1}   & \textbf{#2, \textsc{#3}, #4}   								\\*
+  from \textbf{#5} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #6
                    \end{minipage} \\*
                    & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+  }
+
+\newcommand\experienceCurrent[7]{
+  current  & \textbf{#1, \textsc{#2}, #3}   								\\*
+  from \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+                                  #5
+                      \end{minipage} \\*
+                      & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
