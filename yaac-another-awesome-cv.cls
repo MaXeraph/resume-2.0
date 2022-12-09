@@ -439,7 +439,7 @@
                    & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
 
-\newcommand\experienceCurrent[7]{
+\newcommand\experienceCurrent[6]{
   current  & \textbf{#1, \textsc{#2}, #3}   								\\*
   from \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
                                   #5
