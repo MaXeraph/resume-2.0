@@ -367,9 +367,11 @@
 \newenvironment{keywords}{%
   \renewcommand{\arraystretch}{1.1}
 
+  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   \begin{tabular}{>{}r>{}p{13cm}}
 }{%
   \end{tabular}
+  \end{minipage}
 }
 
 % Render a scholarshipentry in the scolarship environment
