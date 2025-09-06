@@ -419,8 +419,8 @@
 }
 
 \newcommand\university[5]{
-   from \textbf{#1}   & \textbf{#2, \textsc{#3}}   								\\*
-   to \textbf{#4} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+   to \textbf{#4}   & \textbf{#2, \textsc{#3}}   								\\*
+   from \textbf{#1} & \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
   					         #5
                    \end{minipage} \\* 
   }
